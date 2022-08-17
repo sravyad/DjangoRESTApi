@@ -23,7 +23,7 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
-    def create_super_user(self,email,name,password):
+    def create_superuser(self,email,name,password):
         """create a new admin with  the given details"""
         user=self.create_user(email,name,password)
         user.is_staff=True
